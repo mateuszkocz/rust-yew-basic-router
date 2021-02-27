@@ -1,5 +1,10 @@
+#![recursion_limit = "1000"]
+
 mod utils;
 mod heading;
+mod root;
+mod router;
+mod route;
 
 use wasm_bindgen::prelude::*;
 use yew::prelude::*;
@@ -68,5 +73,5 @@ impl Component for Model {
 
 #[wasm_bindgen(start)]
 pub fn run_app() {
-    App::<Model>::new().mount_as_body();
+    App::<root::Root>::new().mount_as_body();
 }
